@@ -3,6 +3,9 @@ package com.test.testandroid;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Process;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -89,5 +92,30 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
 		intent.setData(Uri.parse(adapter.getItem(position).url));
 		startActivity(intent);
 	}
+	
+	
+	
+	@Override
+	public void finish() {
+		// TODO Auto-generated method stub
+		super.finish();
+		handler.sendEmptyMessageDelayed(0, 400);
+	}
+
+	static Handler handler = new Handler() {
+
+		@Override
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case 0:
+//				Process.killProcess(Process.myPid());
+				System.exit(0);
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 
 }
