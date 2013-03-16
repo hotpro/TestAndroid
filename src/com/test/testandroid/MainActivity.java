@@ -67,8 +67,10 @@ public class MainActivity extends BaseActivity implements OnItemClickListener {
 
 	}
 
-	private TestItem[] items = new TestItem[] { new TestItem("Test Wifi",
-			"yutaot://testwifi"), };
+	private TestItem[] items = new TestItem[] { 
+			new TestItem("Test Wifi", "yutaot://testwifi"),
+			new TestItem("Test Event", "yutaot://testevent"),
+			};
 
 	class TestItem {
 		TestItem(String n, String u) {

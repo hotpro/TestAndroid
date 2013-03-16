@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.test.testandroid.testevent.EventLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#032d3d"
+    android:orientation="vertical" >
+
+    <com.test.testandroid.testevent.EventTextView
+        android:id="@+id/tvEvent"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:background="@android:color/white"
+        android:text="Activity - ViewGroup - View Event dispatch Test" />
+
+</com.test.testandroid.testevent.EventLinearLayout>
