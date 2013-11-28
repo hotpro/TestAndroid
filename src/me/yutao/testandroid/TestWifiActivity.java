@@ -1,4 +1,4 @@
-package com.test.testandroid;
+package me.yutao.testandroid;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import me.yutao.testandroid.R;
 
 public class TestWifiActivity extends BaseActivity implements OnClickListener {
 
@@ -19,17 +20,17 @@ public class TestWifiActivity extends BaseActivity implements OnClickListener {
 		btnSwitchWifi = (Button) findViewById(R.id.btn_switch_wifi);
 		btnSwitchWifi.setOnClickListener(this);
 		wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
-		btnSwitchWifi.setText(wifiManager.isWifiEnabled() ? "已开" : "已关");
+		btnSwitchWifi.setText(wifiManager.isWifiEnabled() ? "??????" : "??????");
 	}
 
 	@Override
 	public void onClick(View view) {
 		if (wifiManager.isWifiEnabled()) {
 			wifiManager.setWifiEnabled(false);
-			btnSwitchWifi.setText("已关");
+			btnSwitchWifi.setText("??????");
 		} else {
 			wifiManager.setWifiEnabled(true);
-			btnSwitchWifi.setText("已开");
+			btnSwitchWifi.setText("??????");
 		}
 	}
 

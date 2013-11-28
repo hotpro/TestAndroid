@@ -1,4 +1,4 @@
-package com.test.testandroid.testevent;
+package me.yutao.testandroid.testevent;
 
 import android.content.Context;
 import android.util.AttributeSet;

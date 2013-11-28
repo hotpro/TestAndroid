@@ -1,4 +1,4 @@
-package com.test.testandroid.testevent;
+package me.yutao.testandroid.testevent;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.test.testandroid.R;
+import me.yutao.testandroid.R;
 
 public class EventTestActivity extends Activity {
     @Override

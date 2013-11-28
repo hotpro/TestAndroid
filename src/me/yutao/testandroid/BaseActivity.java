@@ -1,4 +1,4 @@
-package com.test.testandroid;
+package me.yutao.testandroid;
 
 import android.support.v4.app.FragmentActivity;
 

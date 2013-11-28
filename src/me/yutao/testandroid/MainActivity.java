@@ -1,4 +1,4 @@
-package com.test.testandroid;
+package me.yutao.testandroid;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +15,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import me.yutao.testandroid.R;
 
 public class MainActivity extends BaseActivity implements OnItemClickListener {
 
