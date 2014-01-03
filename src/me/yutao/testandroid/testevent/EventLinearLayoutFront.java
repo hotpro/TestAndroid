@@ -6,21 +6,20 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
 
-public class EventLinearLayout extends LinearLayout {
-	private String tag = EventLinearLayout.class.getSimpleName();
+public class EventLinearLayoutFront extends LinearLayout {
+	private String tag = EventLinearLayoutFront.class.getSimpleName();
 
-	public EventLinearLayout(Context context) {
+	public EventLinearLayoutFront(Context context) {
 		super(context);
 	}
 
-	public EventLinearLayout(Context context, AttributeSet attrs) {
+	public EventLinearLayoutFront(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		Object t = getTag();
 		if (t instanceof String) {
 			tag = (String) t;
 		}
 	}
-	
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
     	System.out.println(tag+ " dispatchTouchEvent.action=" + Tool.getTouchAction(ev.getAction()) + " begin");
@@ -44,7 +43,6 @@ public class EventLinearLayout extends LinearLayout {
 		return r;
 //		return true;
 	}
-	
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		System.out.println("LinearLayout.onKeyDown.key=" + keyCode);

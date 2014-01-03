@@ -5,21 +5,24 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 
 import me.yutao.testandroid.R;
 
-public class EventTestActivity extends Activity {
+public class EventTestActivity extends Activity implements OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_event);
-        
-        View v = findViewById(R.id.tvEvent);
-        v.setFocusable(true);
-        
-        ViewGroup parent = (ViewGroup) v.getParent();
-        parent.setFocusable(true);
+        setContentView(R.layout.test_event_normal);
+//        View v = findViewById(R.id.tvFront);
+//        v.setOnClickListener(this);
+//        
+//        View v = findViewById(R.id.tvEvent);
+//        v.setFocusable(true);
+//        
+//        ViewGroup parent = (ViewGroup) v.getParent();
+//        parent.setFocusable(true);
         
     }
     @Override
@@ -38,5 +41,10 @@ public class EventTestActivity extends Activity {
 	public boolean onKeyUp(int keyCode, KeyEvent event) {
 		System.out.println("Activity::onKeyUp::key=" + keyCode);
 		return super.onKeyUp(keyCode, event);
+	}
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
 	}
 }
